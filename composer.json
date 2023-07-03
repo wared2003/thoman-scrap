@@ -1,0 +1,21 @@
+{
+    "name": "wared2003/thomann-scrap",
+    "description": "thoman scraping lib",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Wared2003\\ThomannScrap\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Edouard Nicolas",
+            "email": "edouardn809@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "guzzlehttp/guzzle": "^7.7"
+    }
+}
