@@ -40,11 +40,11 @@ class Thomann
         } catch (GuzzleException $e) {
             return [];
         }
-            $doc = new DOMDocument();
-        $doc->loadHTML($html);
-        $xpath = new DOMXPath($doc);
-        $categorys = $xpath->evaluate("//div[@class='category']");
         try {
+            $doc = new DOMDocument();
+            $doc->loadHTML($html);
+            $xpath = new DOMXPath($doc);
+            $categorys = $xpath->evaluate("//div[@class='category']");
             /* @phpstan-ignore-next-line */
             foreach ($categorys as $category) {
                 $texts = [];
