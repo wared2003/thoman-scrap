@@ -22,5 +22,7 @@ jobs:
           tools: composer
       - name: 'Install dependencies'
         run: composer install
+      - name: 'Run tests'
+        run: vendor/bin/phpunit tests
       - name: 'Run phpstan'
         run: vendor/bin/phpstan analyse src --level=max
