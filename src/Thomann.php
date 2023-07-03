@@ -49,7 +49,7 @@ class Thomann
             foreach ($categorys as $category) {
                 $texts = [];
                 /* @phpstan-ignore-next-line */
-                foreach (explode("\n", $category->textContent->PHP_EOL) as $el) {
+                foreach (explode("\n", $category->textContent) as $el) {
                     if (trim($el) != "" && preg_match("/\w/", trim($el))) {
                         array_push($texts, ltrim($el));
                     }
